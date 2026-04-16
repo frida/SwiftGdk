@@ -141,8 +141,10 @@ struct _GdkMonitorInterface {};
 
 #define GLIB_DISABLE_DEPRECATION_WARNINGS
 #include <sys/types.h>
+#if !defined(_WIN32)
 #include <unistd.h>
 #include <termios.h>
+#endif
 #include <gdk/gdk.h>
 
 #undef GDK_ACTION_ALL
